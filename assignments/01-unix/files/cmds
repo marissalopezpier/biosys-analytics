@@ -1,0 +1,217 @@
+    1  cd /rsgrps/bh_class
+    2  mkdir mal1
+    3  ls
+    4  cd
+    5  cd .ssh
+    6  ls
+    7  ssh-keygen
+    8  cd
+    9  cd .ssh
+   10  ssh-keygen
+   11  ls
+   12  cat id_rsa.pub
+   13  cd /rsgrps/bh_class/marissalopezpier
+   14  cd
+   15  /rsgrps/bh_class/marissalopezpier
+   16  git clone git@github.com:marissalopezpier/biosyss-analytics.git
+   17  cd /rsgrps/bh_class/username
+   18  git clone git@github.com:marissalopezpier/biosys-analytics.git
+   19  cd /rsgrps/bh_class
+   20  mkdir mal1
+   21  cd
+   22  cd .ssh
+   23  cat id_rsa.pub 
+   24  cd /rsgrps/bh_class/mal1
+   25  git clone git@github.com:marissalopezpier/biosys-analytics.git
+   26  cd
+   27  .ssh
+   28  cd .ssh
+   29  cd /rsgrps/bh_class
+   30  ls
+   31  mkdir mal1
+   32  cd /rsgrps/bh_class/mal1
+   33  ls
+   34  git clone git@github.com:marissalopez/biosys-analytics.git
+   35  git clone git@github.com:marissalopezpier/biosys-analytics.git
+   36  cd/rsgrps/bh_class/mal1
+   37  cd /rsgrps/bh_class/mal1
+   38  ls
+   39  cd /rsgrps/bh_class/mal1
+   40  git clone git@github.com:marissalopezpier/biosys-analytics.git
+   41  cd /rsgrps/bh_class/mal1
+   42  git clone git@github.com:marissalopezpier/biosys-analytics.git
+   43  cd /rsgrps/bh_class/mal1
+   44  ls
+   45  cd /rsgrps/bh_class
+   46  ls
+   47  cd /rsgrps/bh_class/mal1
+   48  mkdir mal1
+   49  ls
+   50  cd /rsgrps/bh_class
+   51  mkdir mal1
+   52  cd /rsgrps/bh_class/mal1
+   53  cd
+   54  cd .ssh
+   55  cat id_rsa.pub 
+   56  cd /rsgrps/bh_class/mal1
+   57  git clone git@github.com:marissalopezpier/biosys-analytics.git
+   58  ls
+   59  cd /rsgrps/bh_class/mal1
+   60  ls
+   61  git clone git@github.com:marissalopezpier/biosys-analytics.git
+   62  
+   63  git clone git@github.com:marissalopezpier/biosys-a
+   64  cd/rsgrps/bh_class
+   65  cd /rsgrps/bh_class
+   66  ls
+   67  cd /rsgrps/bh_class
+   68  cd/rsgrps/bh_class_mal1
+   69  cd /rsgrps/bh_class/mal1
+   70  ls
+   71  git clone git@github.com:marissalopezpier/biosys-analytics.git
+   72  pwd
+   73  ls 
+   74  ls mal1
+   75  ls
+   76  cd mal1
+   77  ls
+   78  pwd
+   79  rm mal1
+   80  rm -r mal1
+   81  cd /rsgrps/bh_class/mal1
+   82  menu on
+   83  ls
+   84  man ls
+   85  ls -l
+   86  echo hello
+   87  echo hello amy
+   88  echo "hello"
+   89  cowsay hello
+   90  env
+   91  echo $ user
+   92  echo $USER
+   93  echo USER
+   94  printenv $USER
+   95  type ssh
+   96  whoch ssh
+   97  which ssh
+   98  tough foo
+   99  touch foo
+  100  ipwb
+  101  pwd
+  102  touch foo
+  103  ls
+  104  ls -l
+  105  ls- lh
+  106  ls -lh
+  107  rm foo
+  108  ls
+  109  manfind
+  110  man find
+  111  find --help
+  112  cd
+  113  ls
+  114  cd
+  115  touch foo
+  116  ls
+  117  cd/
+  118  cd /
+  119  ls
+  120  touch foo
+  121  ls-F
+  122  ls -F
+  123  ls -l
+  124  pwd
+  125  cd
+  126  pwd
+  127  cd$HOME
+  128  echo $home
+  129  echo$HOME
+  130  echo $HOME
+  131  top
+  132  ps
+  133  ps -fu $USER
+  134  kill 5309
+  135  find du -size
+  136  ssh mal1@hpc.arizona.edu
+  137  find du -shc
+  138  du -shc
+  139  w > who
+  140  ls -1
+  141  ls-l
+  142  ls -l
+  143  ls -lh who
+  144  w > who
+  145  cat < who
+  146  cat < who | head
+  147  ls -l
+  148  tree
+  149  tree -d -L 1 /
+  150  cd/
+  151  cd /
+  152  tree -d -L 1 /
+  153  Secret=ilikecake
+  154  echo $SECRET
+  155  SECRET=ilikecake
+  156  echo $SECRET
+  157  ls
+  158  q
+  159  echo $PATH
+  160  PATH=/rsgrps/bh_class/bin:$PATH
+  161  echo $PATH
+  162  python --version
+  163  git add files
+  164  cd~
+  165  cd ~
+  166  ls
+  167  tree -d -L 1
+  168  tree -d -L
+  169  tree -d -L 1 /
+  170  tree -d -L 1 //
+  171  tree -d -L 1 /
+  172  cd/
+  173  cd ~
+  174  tree -d -L 1 /
+  175  pwd
+  176  echo $HOME
+  177  cd /rsgrps/bh_class
+  178  $HOME
+  179  echo $HOME
+  180  cd ~
+  181  mkdir files
+  182  ls
+  183  touch answer.txt
+  184  ls
+  185  rm answer.txt
+  186  ls
+  187  touch answers.txt
+  188  git add files
+  189  echo $PATH
+  190  cd /rsgrps/bh_class/mal1/biosys-analytics/assignments/01-unix/files/
+  191  ls
+  192  man wc
+  193  wc *.txt
+  194  wc -l *txt
+  195  find *.txt -size +50k
+  196  cd /rsgrps/bh_class/mal1/biosys-analytics/assignments/01-unix/files/
+  197  find *.txt -size +50k
+  198  md5sum *.txt
+  199  $ df -k
+  200  man df
+  201  df -k
+  202  du -h
+  203  man du
+  204  $ grep -i 'judge' *.txt | wc -l
+  205   grep -i 'judge' *.txt | wc -l
+  206  grep -l 'human' *.txt
+  207   grep -io 'scarlet' scarlet.txt | wc -w
+  208  head -q *.txt -n 15 >> foo 
+  209  cat foo
+  210  $ wc -l foo
+  211   wc -l foo
+  212  head *.txt -n 15 >> foo 
+  213  cat foo
+  214  wc -l foo
+  215  rm foo
+  216  ls
+  217  history > cmds

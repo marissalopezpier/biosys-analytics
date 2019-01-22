@@ -1,0 +1,169 @@
+$ ssh  mal1@email.arizona.edu
+
+$ git remote add upstream https://github.com/hurwitzlab/biosys-analytics.git
+
+$ git pull upstream master
+
+$ cd /rsgrps/bh_class/mal1/biosys-analytics/assignments/01-unix/
+
+$ mkdir files
+
+$ cd files
+
+$ ls
+
+$ wget https://www.usconstitution.net/const.txt
+$ wget https://www.constitution.org/usdeclar.txt
+ 
+$ wget -c https://www.gutenberg.org/files/25344/25344-0.txt -O scarlet.txt
+
+##Show a long listing of the files
+$ ls
+
+[mal1@login3 files]$ ls
+$ const.txt  scarlet.txt  usdeclar.txt
+
+##Show a command to count the number of lines in each file and a total count of all lines
+$ wc -l *.txt
+
+[mal1@login2 files]$ wc -l *txt
+     0 answers.txt
+   872 const.txt
+  9120 scarlet.txt
+   176 usdeclar.txt
+ 10168 total
+
+
+##Show a command that will find the files in this directory which are larger than 50k 
+$ find *.txt -size +50k 
+
+##Show a command that will tell you what kind of file that Unix considers "const.txt"
+$ file const.txt
+[mal1@login2 files]$ find *.txt -size +50k
+scarlet.txt
+
+##Show a single command that will print the MD5 sum of all the text files (without mentioning each file individually)
+$ md5sum *.txt
+
+[mal1@login2 files]$ md5sum *.txt
+d41d8cd98f00b204e9800998ecf8427e  answers.txt
+f66a8165c621d48bac2216b2f31e8742  const.txt
+4958553be1483e4cbd615ce5fa73f6ab  scarlet.txt
+7f54939b30ae7b6d45d473a4c82a41b0  usdeclar.txt
+
+##Show the output of a command that will tell you how much disk space in kilobytes (K) is being used
+$ df -k
+[mal1@login2 files]$ df -k
+Filesystem               1K-blocks          Used    Available Use% Mounted on
+/dev/sda2                944785812      33623852    863162884   4% /
+none                      98884376            24     98884352   1% /dev/shm
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs1/rsgrps
+                     1543570980864 1199515436032 344055544832  78% /rsgrps
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/pbs
+                       35970351104    6869296128  29101054976  20% /pbs
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/Bright_cm_shared
+                       35970351104    6869296128  29101054976  20% /cm/shared
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs1/bio5
+                        4294967296     410201088   3884766208  10% /bio5
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/unsupported
+                       35970351104    6869296128  29101054976  20% /unsupported
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs3/extra
+                      540897443840   47368439808 493529004032   9% /extra
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs3/xdisk
+                       10737418240             0  10737418240   0% /xdisk
+hpc-nfs0-10g.hpc.arizona.edu:/gsfs2/home
+                       35970351104    6869296128  29101054976  20% /home
+
+##Show a command to count how many lines of text contain the word "judge" (irrespective of case) in all the files
+$ grep -i 'judge' *.txt | wc -l
+
+[mal1@login2 files]$  grep -i 'judge' *.txt | wc -l
+22
+
+##Show a command that will display only the names of the files that contain the word "human"
+$ grep -l 'human' *.txt 
+
+[mal1@login2 files]$ grep -l 'human' *.txt
+scarlet.txt
+usdeclar.txt
+
+##Show a single command that will count the number of times the word "scarlet" appears in "scarlet.txt" (case-insensitive); 
+that is, not the number of lines that contain "scarlet" but each occurrence of the word
+$ grep -io 'scarlet' scarlet.txt | wc -w
+
+[mal1@login2 files]$  grep -io 'scarlet' scarlet.txt | wc -w
+125
+
+##Show a single command that will take the first 15 lines from each file and append them into a new file called "foo"
+
+$ head *.txt -n 15 >> foo 
+[mal1@login2 files]$ head -q *.txt -n 15 >> foo
+
+$ cat foo
+==> const.txt <==
+Provided by USConstitution.net
+------------------------------
+
+[Note: Repealed text is not noted in this version.  Spelling errors have been
+corrected in this version.  For an uncorrected, annotated version of the
+Constitution, visit http://www.usconstitution.net/const.html ]
+
+We the People of the United States, in Order to form a more perfect Union,
+establish Justice, insure domestic Tranquility, provide for the common
+defence, promote the general Welfare, and secure the Blessings of Liberty to
+ourselves and our Posterity, do ordain and establish this Constitution for the
+United States of America.
+
+Article 1.
+
+
+==> scarlet.txt <==
+The Project Gutenberg EBook of The Scarlet Letter, by Nathaniel Hawthorne
+
+This eBook is for the use of anyone anywhere at no cost and with
+almost no restrictions whatsoever.  You may copy it, give it away or
+re-use it under the terms of the Project Gutenberg License included
+with this eBook or online at www.gutenberg.net
+
+
+Title: The Scarlet Letter
+
+Author: Nathaniel Hawthorne
+
+Illustrator: Mary Hallock Foote
+             L. S. Ipsen
+
+
+==> usdeclar.txt <==
+                      Declaration of Independence
+
+                   [Adopted in Congress 4 July 1776]
+
+
+
+   The Unanimous Declaration of the Thirteen United States of America
+
+When, in the course of human events, it becomes necessary for one people to
+dissolve the political bands which have connected them with another, and to
+assume among the powers of the earth, the separate and equal station to
+which the laws of nature and of nature's God entitle them, a decent respect
+to the opinions of mankind requires that they should declare the causes
+which impel them to the separation.
+
+
+
+##Show a command that shows how many lines are in "foo"
+$ wc -l foo
+
+[mal1@login2 files]$ wc -l foo
+97 foo
+
+##You might have expected that the total number of lines in the previous question would be 45 (15 * 3), 
+but it should not be. Why is it more or less?
+Because it prints the file name between headers, unless use the option -q (-quiet) to never print headers with file name.
+"$ head -q *.txt -n 15 >> foo "
+##Remove the file called "foo"
+$ rm foo
+
+[mal1@login2 files]$ ls
+answers.txt  const.txt  scarlet.txt  usdeclar.txt
