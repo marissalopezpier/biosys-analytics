@@ -1,0 +1,64 @@
+#Part 2 
+
+
+$ ssh  mal1@email.arizona.edu
+
+$ git remote add upstream https://github.com/hurwitzlab/biosys-analytics.git
+
+$ git pull upstream master
+
+$ cd /rsgrps/bh_class/mal1/biosys-analytics/assignments/01-unix-grad
+
+$ mkdir files
+
+$ touch answers.txt
+
+$ wget https://www.usconstitution.net/const.txt
+
+$ wget https://www.constitution.org/usdeclar.txt
+ 
+$ wget -c https://www.gutenberg.org/files/25344/25344-0.txt -O scarlet.txt
+
+
+
+#Show a single command that will calculate the number of words in the files whose names start with either 
+"c" or "s"; the command must use a pattern and not list the files individually
+
+[mal1@login2 files]$  wc -w [cs]*
+  7652 const.txt
+ 86895 scarlet.txt
+ 94547 total
+
+#Show a command that will show the lines that begin with "Article" followed by a space and a number
+
+[mal1@login2 files]$ grep 'Article [0-9]' *.txt
+const.txt:Article 1.
+const.txt:Article 2.
+const.txt:Article 3.
+const.txt:Article 4.
+const.txt:Article 5.
+const.txt:Article 6.
+const.txt:Article 7.
+
+#Show a command that will count the number of empty lines in "const.txt"
+
+[mal1@login2 files]$ grep -c "^$" const.txt
+169
+
+#Show a command that will find all the lines in "scarlet.txt" that begin with a vowel (case-insensitive) 
+and shows you a count by letter like the output in Table 1
+
+[mal1@login2 files]$ grep -i '^[aeiou]' scarlet.txt | cut -b 1| sort|uniq -c
+    633 a
+     59 A
+    199 e
+     10 E
+    348 i
+     88 I
+    358 o
+     20 O
+     80 u
+      6 U
+
+
+#Do "history > cmds"
