@@ -27,14 +27,9 @@ def main():
     for file in filein:
         if not os.path.isfile(file):
             print('FILE "{}" is not a file'.format(file),file=sys.stderr)
-            exit(1)
-    for foo in outdir: 
-        if not os.path.isfile(foo):
-            print('FILE "{}" is not a file'.format(foo),file=sys.stderr)
-            exit(1)
-
-
+            continue
     ## (START) If it is a file
+    
     f_in = open( filein, 'r' )
     if len(outdir)>0:
         f_out = open( outdir, 'w' )
