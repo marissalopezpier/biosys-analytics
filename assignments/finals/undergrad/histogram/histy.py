@@ -20,7 +20,7 @@ def main():
 
     for num in (sorted(inputs)):
         if num >= min_num:
-            print(num, char*int(num/scale))
+            print('{:3} {}'.format(num, char*int(num/scale)))
 
 
 #def histogram (inputs):
